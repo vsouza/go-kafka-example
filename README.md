@@ -46,7 +46,7 @@ Vinicius Souza – [@iamvsouza](https://twitter.com/iamvsouza) – hi@vsouza.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/vsouza/democratic](https://github.com/vsouza/go-kafka-example)
+[https://github.com/vsouza/go-kafka-example](https://github.com/vsouza/go-kafka-example)
 
 [go-version-image]:https://img.shields.io/badge/Go%20version-1.7-blue.svg
 [go-version-url]: https://golang.org/
