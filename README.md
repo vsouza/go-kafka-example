@@ -8,7 +8,7 @@
 
 ## Setup
 
-`brew install kafka`
+[Apache Kafka Quickstart](https://kafka.apache.org/quickstart)
 
 __Producer__
 
@@ -17,6 +17,14 @@ __Producer__
 ![](producer.png)
 
 __Consumer__
+
+flags:
+ 
+  * brokerList
+  * topic
+  * partition (default: 0)
+  * offsetType
+  * messageCountStart (default: 0)
 
 `go run cmd/consumer/main.go`
 
