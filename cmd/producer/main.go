@@ -3,7 +3,14 @@ package main
 import (
 	"fmt"
 
+	kingpin "gopkg.in/alecthomas/kingpin.v2"
+
 	"github.com/Shopify/sarama"
+)
+
+var (
+	brokerList = kingpin.Flag("brokerList", "List of brokers to connect").Default("localhost:9092").Strings()
+	topic      = kingpin.Flag("topic", "Topic name").Default("important").String()
 )
 
 func main() {
@@ -12,28 +19,22 @@ func main() {
 	config.Producer.RequiredAcks = sarama.WaitForAll
 	config.Producer.Retry.Max = 5
 	config.Producer.Return.Successes = true
-
-	brokers := []string{"localhost:9092"}
-	producer, err := sarama.NewSyncProducer(brokers, config)
+	producer, err := sarama.NewSyncProducer(*brokerList, config)
 	if err != nil {
 		panic(err)
 	}
-
 	defer func() {
 		if err := producer.Close(); err != nil {
 			panic(err)
 		}
 	}()
-
-	topic := "important"
 	msg := &sarama.ProducerMessage{
-		Topic: topic,
+		Topic: *topic,
 		Value: sarama.StringEncoder("Something Cool"),
 	}
-
 	partition, offset, err := producer.SendMessage(msg)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Message is stored in topic(%s)/partition(%d)/offset(%d)\n", topic, partition, offset)
+	fmt.Printf("Message is stored in topic(%s)/partition(%d)/offset(%d)\n", *topic, partition, offset)
 }
