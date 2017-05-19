@@ -29,11 +29,11 @@ flags:
 `go run cmd/consumer/main.go`
 
 ```
-Received messages  Something Cool
-Received messages  Something Cool
-Received messages  Something Cool
-Received messages  Something Cool
-Received messages  Something Cool
+Received messages  Something Cool #1
+Received messages  Something Cool #2
+Received messages  Something Cool #3
+Received messages  Something Cool #4
+Received messages  Something Cool #5
 ```
 
 ## Contribute
