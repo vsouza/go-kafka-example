@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-
+	kingpin.Parse()
 	config := sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForAll
 	config.Producer.Retry.Max = 5
