@@ -19,6 +19,7 @@ var (
 )
 
 func main() {
+	kingpin.Parse()
 	config := sarama.NewConfig()
 	config.Consumer.Return.Errors = true
 	brokers := *brokerList
