@@ -7,6 +7,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)
 
+![](header.png)
+
+
 ## Setup
 
 [Apache Kafka Quickstart](https://kafka.apache.org/quickstart)
