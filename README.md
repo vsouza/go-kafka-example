@@ -1,3 +1,6 @@
+![](header.png)
+
+
 # Golang Kafka Example
 
 >Sample Golang Kafka Consumer and Producer
@@ -7,7 +10,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)
 
-![](header.png)
+
 
 
 ## Setup
