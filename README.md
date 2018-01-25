@@ -1,17 +1,14 @@
-![](header.png)
+<h1 align="center">Golang Kafka Example</h1>
 
-
-# Golang Kafka Example
+<p align="center">
+  <img src="header.png" />
+  <img src="https://img.shields.io/badge/Go%20version-1.7-blue.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
+  <img src="https://goreportcard.com/badge/github.com/vsouza/go-kafka-example" />
+</p>
 
 >Sample Golang Kafka Consumer and Producer
-
-[![Go Version][go-version-image]][go-version-url]
-[![License][license-image]][license-url]
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)](https://goreportcard.com/badge/github.com/vsouza/go-kafka-example)
-
-
-
 
 ## Setup
 
@@ -55,7 +52,3 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/vsouza/go-kafka-example](https://github.com/vsouza/go-kafka-example)
 
-[go-version-image]:https://img.shields.io/badge/Go%20version-1.7-blue.svg
-[go-version-url]: https://golang.org/
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
