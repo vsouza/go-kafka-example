@@ -11,13 +11,14 @@ import (
 var (
 	brokerList = kingpin.Flag("brokerList", "List of brokers to connect").Default("localhost:9092").Strings()
 	topic      = kingpin.Flag("topic", "Topic name").Default("important").String()
+	maxRetry   = kingpin.Flag("maxRetry", "Retry limit").Default("5").Int()
 )
 
 func main() {
 	kingpin.Parse()
 	config := sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForAll
-	config.Producer.Retry.Max = 5
+	config.Producer.Retry.Max = *maxRetry
 	config.Producer.Return.Successes = true
 	producer, err := sarama.NewSyncProducer(*brokerList, config)
 	if err != nil {
