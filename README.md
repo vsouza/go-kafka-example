@@ -10,7 +10,12 @@
 
 >Sample Golang Kafka Consumer and Producer
 
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvsouza%2Fgo-kafka-example.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvsouza%2Fgo-kafka-example?ref=badge_large)
+
 ## Setup
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvsouza%2Fgo-kafka-example.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvsouza%2Fgo-kafka-example?ref=badge_shield)
+
 
 [Apache Kafka Quickstart](https://kafka.apache.org/quickstart)
 
@@ -51,4 +56,3 @@ Vinicius Souza – [@iamvsouza](https://twitter.com/iamvsouza) – hi@vsouza.com
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/vsouza/go-kafka-example](https://github.com/vsouza/go-kafka-example)
-
