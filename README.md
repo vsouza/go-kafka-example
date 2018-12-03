@@ -1,7 +1,6 @@
 <h1 align="center">Golang Kafka Example</h1>
 
 <p align="center">
-  <img src="header.png" />
   <img src="https://img.shields.io/badge/Go%20version-1.7-blue.svg" />
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
@@ -23,7 +22,7 @@ __Producer__
 __Consumer__
 
 flags:
- 
+
   * brokerList
   * topic
   * partition (default: 0)
