@@ -1,5 +1,8 @@
 <h1 align="center">Golang Kafka Example</h1>
 
+![](header.jpg)
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/Go%20version-1.7-blue.svg" />
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
