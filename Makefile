@@ -1,6 +1,6 @@
 NAME=go-kafka-example
 VERSION=0.0.1
-
+AUTHOR=vsouza
 
 .PHONY: run-producer
 ## run-producer: Run consumer

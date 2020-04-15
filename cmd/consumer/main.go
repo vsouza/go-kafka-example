@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"os"
 	"os/signal"
 
@@ -25,16 +25,16 @@ func main() {
 	brokers := *brokerList
 	master, err := sarama.NewConsumer(brokers, config)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	defer func() {
 		if err := master.Close(); err != nil {
-			panic(err)
+			log.Panic(err)
 		}
 	}()
 	consumer, err := master.ConsumePartition(*topic, 0, sarama.OffsetOldest)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, os.Interrupt)
@@ -43,16 +43,16 @@ func main() {
 		for {
 			select {
 			case err := <-consumer.Errors():
-				fmt.Println(err)
+				log.Println(err)
 			case msg := <-consumer.Messages():
 				*messageCountStart++
-				fmt.Println("Received messages", string(msg.Key), string(msg.Value))
+				log.Println("Received messages", string(msg.Key), string(msg.Value))
 			case <-signals:
-				fmt.Println("Interrupt is detected")
+				log.Println("Interrupt is detected")
 				doneCh <- struct{}{}
 			}
 		}
 	}()
 	<-doneCh
-	fmt.Println("Processed", *messageCountStart, "messages")
+	log.Println("Processed", *messageCountStart, "messages")
 }

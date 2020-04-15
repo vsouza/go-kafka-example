@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 
@@ -22,11 +22,11 @@ func main() {
 	config.Producer.Return.Successes = true
 	producer, err := sarama.NewSyncProducer(*brokerList, config)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 	defer func() {
 		if err := producer.Close(); err != nil {
-			panic(err)
+			log.Panic(err)
 		}
 	}()
 	msg := &sarama.ProducerMessage{
@@ -35,7 +35,7 @@ func main() {
 	}
 	partition, offset, err := producer.SendMessage(msg)
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
-	fmt.Printf("Message is stored in topic(%s)/partition(%d)/offset(%d)\n", *topic, partition, offset)
+	log.Printf("Message is stored in topic(%s)/partition(%d)/offset(%d)\n", *topic, partition, offset)
 }
