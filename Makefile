@@ -12,10 +12,10 @@ run-producer:
 run-consumer:
 	@go run cmd/consumer/main.go
 
-.PHONY: deps-save
+.PHONY: deps-install
 ## deps-install: Install packages and dependencies
 deps-install:
-	@glide install
+	@go mod download
 
 .PHONY: help
 all: help
